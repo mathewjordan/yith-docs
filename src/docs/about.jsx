@@ -12,7 +12,24 @@ export const AboutDocs = () => {
   return (
     <>
       <Anchor id="about" />
-      <h2>About</h2>
+      <div style={{ display: "flex" }}>
+        <h2>About</h2>
+        <div
+          style={{
+            fontSize: "0.7222rem",
+            fontWeight: "700",
+            margin: "0.5rem",
+            textTransform: "uppercase",
+          }}
+        >
+          <a
+            style={{ textDecoration: "none" }}
+            href="https://github.com/mathewjordan/yith"
+          >
+            Github
+          </a>
+        </div>
+      </div>
       <p className="lead">
         Yith is a component library that interweaves IIIF manifests and their
         content into flexible layouts in a usable, responsive, and accessible
