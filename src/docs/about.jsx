@@ -1,10 +1,9 @@
 import React from "react";
-import { styled, css } from "@stitches/react";
+import { styled } from "@stitches/react";
 import Yith from "@yith/yith";
 import Prism from "prismjs";
-import { transform } from "typescript";
 
-export const AboutDocs = () => {
+export const About = () => {
   React.useEffect(() => {
     Prism.highlightAll();
   }, []);
@@ -129,79 +128,6 @@ import Yith from "@yith/yith";
   );
 };
 
-const Wrapper = styled("div", {
-  display: "flex",
-  color: "#1f2233",
-  height: "100%",
-  letterSpacing: "0.01em",
-
-  h2: {
-    marginTop: "3rem",
-
-    "&:first-of-type": {
-      marginTop: "0",
-    },
-  },
-
-  h3: {
-    fontWeight: "900",
-    fontSize: "1.25rem",
-    marginTop: "2rem",
-
-    "&.yith-article-title": {
-      fontWeight: "200",
-      fontFamily: "DM Serif Display",
-      fontSize: "2.5rem",
-      marginBottom: "1rem",
-    },
-  },
-
-  h4: {
-    margin: "1rem 0 1rem",
-  },
-
-  h5: {
-    fontWeight: "300",
-    fontSize: "1.25rem",
-    marginTop: "2rem",
-    borderBottom: "2px solid #47495d11",
-  },
-
-  p: {
-    lineHeight: "1.5em",
-    fontWeight: "300",
-
-    code: {
-      fontSize: "0.8333rem",
-      padding: "0.25rem 0.5rem",
-    },
-
-    "&.subtitle": {
-      fontSize: "2rem",
-      fontWeight: "900",
-      margin: "0.5rem 0 0.25rem",
-    },
-
-    "&.lead": {
-      fontSize: "1.25rem",
-      margin: "0.5rem 0 1rem",
-      fontWeight: "300",
-    },
-  },
-});
-
-const Aside = styled("div", {
-  display: "flex",
-  flexDirection: "column",
-  position: "fixed",
-  width: "calc(25% - 4rem)",
-  height: "100%",
-  flexShrink: "0",
-  padding: "2rem",
-  backgroundColor: "#fff",
-  boxShadow: "2px 2px 5px #00000011",
-});
-
 const Example = styled("div", {
   display: "flex",
   flexDirection: "column",
@@ -249,68 +175,6 @@ const Anchor = styled("span", {
   display: "block",
 });
 
-const Main = styled("div", {
-  display: "flex",
-  flexDirection: "column",
-  position: "relative",
-  left: "25%",
-  width: "calc(75% - 4rem)",
-  height: "100%",
-  flexShrink: "1",
-  overflowX: "hidden",
-  overflowY: "scroll",
-  padding: "2rem 2rem",
-});
-
-const Nav = styled("nav", {
-  margin: "1rem 0 0.5rem",
-
-  strong: {
-    display: "flex",
-    margin: "1rem 0 0.5rem",
-    fontWeight: "700",
-    fontSize: "0.7222rem",
-    textTransform: "uppercase",
-    letterSpacing: "0.025em",
-  },
-
-  ul: {
-    padding: "0",
-    margin: "0 0 1rem",
-    listStyle: "none",
-
-    li: {
-      marginBottom: "0.25rem",
-    },
-  },
-
-  hr: {
-    display: "block",
-    border: "none",
-    backgroundColor: "#47495d11",
-    width: "100%",
-    height: "2px",
-    margin: "2rem 0",
-    fontWeight: "300",
-  },
-
-  "a, a:visited": {
-    color: "#653787",
-    textDecoration: "none",
-    fontWeight: "700",
-
-    "&:hover, &:focus": {
-      color: "#00506d",
-    },
-
-    "&.disabled": {
-      fontWeight: "300",
-      color: "#47495d",
-      opacity: "0.5",
-    },
-  },
-});
-
 const Pre = styled("pre", {
   fontFamily: "'Roboto Mono', monospace",
   fontSize: "0.8333rem !important",
@@ -327,4 +191,4 @@ const Pre = styled("pre", {
   code: { color: "white !important" },
 });
 
-export { Anchor, Aside, Example, Main, Nav, Pre, Wrapper };
+export { Anchor, Example, Pre };

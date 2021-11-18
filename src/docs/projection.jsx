@@ -3,7 +3,7 @@ import React from "react";
 import Yith from "@yith/yith";
 import Prism from "prismjs";
 
-export const ProjectionDocs = () => {
+export const Projection = () => {
   React.useEffect(() => {
     Prism.highlightAll();
   }, []);

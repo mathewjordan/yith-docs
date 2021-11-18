@@ -1,8 +1,8 @@
 import { Anchor, Pre } from "./about";
-import React, { useEffect } from "react";
+import React from "react";
 import Yith from "@yith/yith";
 
-export const PresentationDocs = () => {
+export const Presentation = () => {
   React.useEffect(() => {
     Prism.highlightAll();
   }, []);

@@ -3,7 +3,7 @@ import Yith from "@yith/yith";
 import Prism from "prismjs";
 import { Anchor, Example } from "../about";
 
-export const BuddhaDocs = () => {
+export const Buddha = () => {
   React.useEffect(() => {
     Prism.highlightAll();
   }, []);

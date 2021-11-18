@@ -3,7 +3,7 @@ import Yith from "@yith/yith";
 import Prism from "prismjs";
 import { Anchor, Pre } from "../about";
 
-export const FigureDocs = () => {
+export const Figure = () => {
   React.useEffect(() => {
     Prism.highlightAll();
   }, []);
