@@ -1,106 +1,116 @@
-import { Aside, AboutDocs, Main, Nav, Wrapper } from "./docs/about";
-import { ProjectionDocs } from "./docs/projection";
-import { PresentationDocs } from "./docs/presentation";
-import { BuddhaDocs } from "./docs/examples/buddha";
-import { FigureDocs } from "./docs/previews/figure";
-import { InterstitialDocs } from "./docs/previews/interstitial";
-
-const doScroll = (event) => {
-  event.preventDefault();
-  event.stopPropagation();
-  const href = event.target.getAttribute("href").replace("#", "");
-  const anchor = document.getElementById(href);
-  console.log(anchor);
-  anchor.scrollIntoView({ behavior: "smooth" });
-};
+import { styled } from "@stitches/react";
+import { About } from "./docs/about";
+import { Projection } from "./docs/projection";
+import { Presentation } from "./docs/presentation";
+import { Buddha } from "./docs/examples/buddha";
+import { Figure } from "./docs/previews/figure";
+import { Interstitial } from "./docs/previews/interstitial";
+import { Menu } from "./components/menu";
 
 export default function Docs() {
   return (
     <Wrapper>
       <Aside>
         <h1>Yith</h1>
-        <Nav>
-          <ul>
-            <li>
-              <a href="#about" onClick={doScroll}>
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#usage" onClick={doScroll}>
-                Usage
-              </a>
-            </li>
-          </ul>
-          <strong>Types</strong>
-          <ul>
-            <li>
-              <a href="#presentation" onClick={doScroll}>
-                Presentation
-              </a>
-            </li>
-            <li>
-              <a href="#projection" onClick={doScroll}>
-                Projection
-              </a>
-            </li>
-            <li>
-              <a className="disabled">Progression</a>
-            </li>
-          </ul>
-          <strong>Previews</strong>
-          <ul>
-            <li>
-              <a href="#figure" onClick={doScroll}>
-                Figure
-              </a>
-            </li>
-            <li>
-              <a className="disabled">Hero</a>
-            </li>
-            <li>
-              <a href="#interstitial" onClick={doScroll}>
-                Interstitial
-              </a>
-            </li>
-          </ul>
-          <strong>Plugins</strong>
-          <ul>
-            <li>
-              <a className="disabled">Omeka S</a>
-            </li>
-            <li>
-              <a className="disabled">WordPress</a>
-            </li>
-          </ul>
-          <hr />
-          <strong>Examples</strong>
-          <ul>
-            <li>
-              <a href="#buddha" onClick={doScroll}>
-                Six Impressions of Buddha
-              </a>
-            </li>
-            <li>
-              <a className="disabled">Nimíipuu, The Nez Percé</a>
-            </li>
-            <li>
-              <a className="disabled">Odilon Redon (1840-1916)</a>
-            </li>
-          </ul>
-        </Nav>
+        <Menu />
       </Aside>
       <Main>
-        <AboutDocs />
+        <About />
         <h2>Types</h2>
-        <ProjectionDocs />
-        <PresentationDocs />
+        <Projection />
+        <Presentation />
         <h2>Previews</h2>
-        <FigureDocs />
-        <InterstitialDocs />
+        <Figure />
+        <Interstitial />
         <h2>Examples</h2>
-        <BuddhaDocs />
+        <Buddha />
       </Main>
     </Wrapper>
   );
 }
+
+const Aside = styled("div", {
+  display: "flex",
+  flexDirection: "column",
+  position: "fixed",
+  width: "calc(25% - 4rem)",
+  height: "100%",
+  flexShrink: "0",
+  padding: "2rem",
+  backgroundColor: "#fff",
+  boxShadow: "2px 2px 5px #00000011",
+});
+
+const Main = styled("div", {
+  display: "flex",
+  flexDirection: "column",
+  position: "relative",
+  left: "25%",
+  width: "calc(75% - 4rem)",
+  height: "100%",
+  flexShrink: "1",
+  overflowX: "hidden",
+  overflowY: "scroll",
+  padding: "2rem 2rem",
+});
+
+const Wrapper = styled("div", {
+  display: "flex",
+  color: "#1f2233",
+  height: "100%",
+  letterSpacing: "0.01em",
+
+  h2: {
+    marginTop: "3rem",
+
+    "&:first-of-type": {
+      marginTop: "0",
+    },
+  },
+
+  h3: {
+    fontWeight: "900",
+    fontSize: "1.25rem",
+    marginTop: "2rem",
+
+    "&.yith-article-title": {
+      fontWeight: "200",
+      fontFamily: "DM Serif Display",
+      fontSize: "2.5rem",
+      marginBottom: "1rem",
+    },
+  },
+
+  h4: {
+    margin: "1rem 0 1rem",
+  },
+
+  h5: {
+    fontWeight: "300",
+    fontSize: "1.25rem",
+    marginTop: "2rem",
+    borderBottom: "2px solid #47495d11",
+  },
+
+  p: {
+    lineHeight: "1.5em",
+    fontWeight: "300",
+
+    code: {
+      fontSize: "0.8333rem",
+      padding: "0.25rem 0.5rem",
+    },
+
+    "&.subtitle": {
+      fontSize: "2rem",
+      fontWeight: "900",
+      margin: "0.5rem 0 0.25rem",
+    },
+
+    "&.lead": {
+      fontSize: "1.25rem",
+      margin: "0.5rem 0 1rem",
+      fontWeight: "300",
+    },
+  },
+});

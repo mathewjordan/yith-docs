@@ -3,7 +3,7 @@ import Yith from "@yith/yith";
 import Prism from "prismjs";
 import { Anchor, Pre } from "../about";
 
-export const InterstitialDocs = () => {
+export const Interstitial = () => {
   React.useEffect(() => {
     Prism.highlightAll();
   }, []);
