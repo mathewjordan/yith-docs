@@ -1,20 +1,27 @@
 {
   "name": "yith-docs",
-  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@yith/yith": "^1.0.8",
-    "next": "12.0.2",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "build": "rm -rf dist && node build.js",
+    "dev": "node dev.js"
   },
   "devDependencies": {
-    "eslint": "7.32.0",
-    "eslint-config-next": "12.0.2"
-  }
+    "chokidar": "^3.5.2",
+    "esbuild": "^0.13.14",
+    "live-server": "^1.2.1",
+    "prettier": "^2.4.1"
+  },
+  "dependencies": {
+    "@yith/yith": "^1.0.14",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
