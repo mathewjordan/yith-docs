@@ -5,12 +5,13 @@
   "main": "src/docs.js",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "node build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "prettier": "^2.4.1"
+    "prettier": "^2.4.1",
+    "rewire": "^5.0.0"
   },
   "dependencies": {
     "@babel/runtime": "^7.16.3",
