@@ -16,7 +16,7 @@ export const Projection = () => {
           An immersive guided tour driven by region targeted annotations,
           canvases, and manifests. Inspired by{" "}
           <a href="https://exhibit.so/">Exhibit</a> and{" "}
-          <a href="https://exhibit.so/">Storiiies</a>.
+          <a href="https://www.cogapp.com/storiiies">Storiiies</a>.
         </p>
         <ul>
           <li>Full screen modal deep-zoom experience.</li>
