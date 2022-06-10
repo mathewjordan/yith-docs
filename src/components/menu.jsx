@@ -42,7 +42,7 @@ export const Menu = () => {
           <a className="disabled">Omeka S</a>
         </li>
         <li>
-          <a className="disabled">WordPress</a>
+          <a href="https://github.com/mathewjordan/yith-iiif-wp">WordPress</a>
         </li>
       </ul>
       <hr />
